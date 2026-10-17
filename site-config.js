@@ -1,0 +1,1 @@
+window.NASHA_SITE_CONFIG = { customerServicePhone:"", customerServiceWhatsapp:"" };

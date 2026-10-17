@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#087f70"><meta name="description" content="دليل خدمات ومحلات نشا الرقمية">
+<title>خدمات نشا الرقمية</title><link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div id="memorialScreen" class="memorial-screen" role="dialog" aria-modal="true" aria-labelledby="memorialTitle">
+  <div class="memorial-card">
+    <div class="memorial-top-ornament" aria-hidden="true"><span>✦</span><i></i><span>❀</span><i></i><span>✦</span></div>
+    <div class="memorial-emblem" aria-hidden="true"><span>♡</span><small>✦</small></div>
+    <p class="memorial-bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+    <p class="memorial-kicker">أثرٌ طيب لا ينقطع</p>
+    <h1 id="memorialTitle">صدقة جارية</h1>
+    <p class="memorial-dedication">على روح ولدي الغالي</p>
+    <div class="memorial-divider"><span>❀</span></div>
+    <p class="memorial-request">نرجو منكم الدعاء له بالرحمة والمغفرة</p>
+    <div class="memorial-prayer">
+      <p>اللهم اغفر له وارحمه، واعفُ عنه، وأكرم نزله، ووسّع مدخله، واجعل قبره روضةً من رياض الجنة.</p>
+      <strong>اللهم آمين 🤲</strong>
+    </div>
+    <p class="memorial-note">لا تنسوه من صالح دعائكم</p>
+    <button id="enterSite" class="memorial-enter" type="button">الدخول إلى المنصة <span aria-hidden="true">←</span></button>
+    <p class="memorial-brand">خدمات نشا الرقمية <span>💚</span></p>
+  </div>
+</div>
+
+<header class="topbar"><a class="brand" href="#home"><span class="brand-mark">ن</span><span><b> خدمات نشا الرقميه</b><small>كل خدمات بلدنا في مكان واحد</small></span></a><button id="aboutQuick" class="icon-btn" aria-label="عن الموقع">ⓘ</button></header>
+<main id="app" class="page">
+<section id="home" class="view active">
+<div class="hero"><span class="eyebrow">أهلاً بيك في نشا 💚</span><h1>بتدور على خدمة؟<br>هتلاقيها هنا.</h1><p>دليل بسيط يساعدك توصل للخدمات والمحلات القريبة منك داخل نشا.</p><button class="primary" data-go="search">دوّر على خدمة <span>←</span></button><div class="hero-art">⌂</div></div>
+<div class="section-head"><div><h2>الأقسام</h2><p>اختار المجال اللي محتاجه</p></div><button class="text-btn" data-go="categories">عرض الكل</button></div>
+<div id="homeCategories" class="category-grid"></div>
+<div class="section-head"><div><h2>خدمات مقترحة</h2><p>مجموعة من الأنشطة المسجلة</p></div></div><div id="featured" class="business-grid"></div>
+</section>
+<section id="categories" class="view"><div class="page-heading"><span class="eyebrow">اكتشف</span><h1>الأقسام</h1><p>اختار القسم للوصول للخدمات المناسبة.</p></div><div id="allCategories" class="category-grid"></div><div id="categoryResults" class="business-grid"></div></section>
+<section id="search" class="view"><div class="page-heading"><span class="eyebrow">بحث سريع</span><h1>تدور على إيه؟</h1><p>اكتب اسم النشاط أو نوع الخدمة أو العنوان.</p></div><label class="searchbox"><span>⌕</span><input id="searchInput" placeholder="مثال: صيدلية، سوبر ماركت..." autocomplete="off"></label><div id="searchResults" class="business-grid"></div></section>
+<section id="details" class="view"><button class="back-btn" data-go="home">→ رجوع</button><div id="businessDetails"></div></section>
+<section id="favorites" class="view"><div class="page-heading"><span class="eyebrow">محفوظاتك</span><h1>المفضلة</h1><p>الخدمات اللي حبيت ترجع لها بسرعة.</p></div><div id="favoriteResults" class="business-grid"></div></section>
+<section id="add" class="view"><div class="page-heading"><span class="eyebrow">خلّي الناس تعرفك</span><h1>إضافة خدمة</h1><p>املأ البيانات الأساسية، وهيتجهز طلبك للإرسال على واتساب.</p></div>
+<form id="addForm" class="form-card"><label>اسم صاحب الخدمة<input name="owner" required placeholder="اسمك"></label><label>رقم واتساب صاحب الخدمة<input name="ownerWhatsapp" required placeholder="01xxxxxxxxx" inputmode="tel"></label><label>اسم النشاط<input name="name" required></label><label>القسم<select name="categoryId" id="addCategory" required></select></label><label>العنوان داخل نشا<input name="address" required></label><label>رقم الهاتف<input name="phone" required inputmode="tel"></label><label>واتساب النشاط<input name="whatsapp" required inputmode="tel"></label><div class="two-col"><label>موعد الفتح<input name="openingTime" type="time"></label><label>موعد الإغلاق<input name="closingTime" type="time"></label></div><label>يوم الإجازة<select name="weeklyOffDay"><option>لا يوجد</option><option>السبت</option><option>الأحد</option><option>الإثنين</option><option>الثلاثاء</option><option>الأربعاء</option><option>الخميس</option><option>الجمعة</option></select></label><label>وصف مختصر (اختياري)<textarea name="description" rows="3"></textarea></label><button class="primary full" type="submit">تجهيز الطلب على واتساب</button><p class="hint">إرسال الطلب لا يعني نشره تلقائيًا. تتم مراجعة البيانات وإضافتها للموقع يدويًا.</p></form></section>
+<section id="about" class="view"><div class="about-hero"><span class="eyebrow">عن المنصة</span><h1>نشا أقرب لبعض 💚</h1><p>خدمات نشا الرقمية دليل محلي يساعد أهل البلد في الوصول إلى المحلات والخدمات بسهولة، ويمنح أصحاب الأنشطة مساحة للتعريف بخدماتهم.</p></div><div class="info-card"><h2>رؤيتنا</h2><p>أن تكون خدمات نشا في متناول الجميع من خلال تجربة واضحة وسهلة على الموبايل.</p></div><div class="info-card"><h2>إزاي تضيف خدمتك؟</h2><p>استخدم صفحة «إضافة خدمة» وأرسل البيانات للمراجعة. لن تظهر الخدمة إلا بعد مراجعتها وإضافتها للموقع.</p></div><div class="info-card"><h2>خدمة العملاء</h2><p id="contactText">سيتم توفير بيانات التواصل قريبًا.</p><div id="serviceContacts" class="contact-row"></div></div><footer>تم تصميم وتطوير منصة خدمات نشا الرقمية لخدمة أهل نشا 💚<br><small>جميع الحقوق محفوظة © خدمات نشا الرقمية <span id="year"></span></small></footer></section>
+</main>
+<nav class="bottom-nav" aria-label="التنقل الرئيسي"><button data-go="home" class="nav-item active"><span>⌂</span><small>الرئيسية</small></button><button data-go="categories" class="nav-item"><span>▦</span><small>الأقسام</small></button><button data-go="search" class="nav-item"><span>⌕</span><small>بحث</small></button><button data-go="add" class="nav-item add-nav"><span>＋</span><small>إضافة خدمة</small></button><button data-go="favorites" class="nav-item"><span>♡</span><small>المفضلة</small></button><button data-go="about" class="nav-item"><span>ⓘ</span><small>عن الموقع</small></button></nav>
+<script src="data/categories.js"></script><script src="data/businesses.js"></script><script src="data/site-config.js"></script><script src="assets/js/app.js"></script>
+</body></html>
